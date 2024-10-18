@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 2</title>
+</head>
+    <style>
+    *{border: 1px solid black; } 
+
+
+    .container{
+        display: grid;
+        min-height: 100vh;
+        grid-template-areas: 
+        "header header header header"
+        "main sidebar sidebar sidebar"
+        "main sidebar sidebar sidebar"
+        "main sidebar sidebar sidebar"
+        "main sidebar sidebar sidebar"
+        "main footer footer footer"
+        ;
+    }
+
+
+    #box1{grid-area: header;
+    background-color: dodgerblue;
+    }
+    #box3{grid-area: main;
+    background-color: chocolate;
+    }
+    #box2{grid-area: sidebar;
+    background-color: hotpink;
+    }
+    #box5{grid-area: footer;
+    background-color: mediumseagreen;  
+    }
+
+    
+    </style>
+<body>   
+        <div class="container">
+            <div class="box" id="box1">header</div>
+            <div class="box" id="box2">content</div>
+            <div class="box" id="box3">main</div>
+            <div class="box" id="box5">footer</div>
+        </div>   
+</body>
+</html>
