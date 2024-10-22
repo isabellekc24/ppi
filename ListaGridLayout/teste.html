@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao4</title>
+    <style>
+        
+        *{border: 1px solid black; }
+
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            padding: 10px;
+            grid-template-areas: 
+                "header header header"
+                "leftaside banner rightaside"
+                "leftaside main rightaside"
+                "lowcontent lowcontent lowcontent"
+                "footer footer footer";
+        }
+
+        .box {
+            background-color: lightcoral;
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            border-radius: 10px;}
+
+        #boxheader {
+            grid-area: header;
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxbanner {
+            grid-area: banner;
+            background-color: red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxleftaside {
+            grid-area: leftaside;
+            background-color: green;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxmain {
+            grid-area: main;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxrightaside {
+            grid-area: rightaside;
+            background-color: orange;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxlowcontent {
+            grid-area: lowcontent;
+            background-color: green;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxfooter {
+            grid-area: footer;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="boxheader">Header</div>
+        <div class="box" id="boxbanner">Banner</div>
+        <div class="box" id="boxleftaside">Left Aside</div>
+        <div class="box" id="boxmain">Main Content</div>
+        <div class="box" id="boxrightaside">Right Aside</div>
+        <div class="box" id="boxlowcontent">Low Content</div>
+        <div class="box" id="boxfooter">Footer</div>
+    </div>
+</body>
+</html>
