@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 5</title>
+    <style>
+        
+
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        min-height: 100vh;
+        grid-template-areas: 
+            "header header header header header"
+            "leftaside banner banner banner rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "footer footer footer footer footer";
+     }
+
+        .box {
+
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 2px;
+            border-radius: 10px;}
+
+        #titulo {
+            grid-area: header;
+            padding: 5px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+
+        #menu {
+            grid-area: banner;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #boxleftaside {
+            grid-area: leftaside;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+        .item{
+            border: 1px beige;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+        }
+        
+        #boxmain {
+            grid-area: main;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #chat {
+            justify-content: center;
+            text-align: center;
+            grid-area: rightaside;
+            padding: 10px;
+            border-radius: 10px;
+            
+
+        }
+
+        #atendimento {
+            grid-area: footer;
+
+            text-align: center;
+            font-size: 18x;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="titulo">
+            <h1><b>DELIVERY DE ALIMENTOS</b></h1>
+        </div>
+        <div class="box" id="menu">
+            <h1>Cardápio</h1>
+        </div>
+        <div class="box" id="boxleftaside"></div>
+        <div class="boxmain">
+            <div class="item">
+                <h2>Pizza</h2>
+                <p>R$40,00</p>
+            </div>
+            <div class="item">
+                <h2>Hamburguer</h2>
+                <p>R$25,00</p>
+            </div>
+            <div class="item">
+                <h2>Sanduiche</h2>
+                <p>R$15,00</p>
+            </div>
+        </div>
+
+
+        <div class="box" id="chat">
+            <h2>Atendente CHAT</h2>
+            <p>Digite seu nome:</p>
+            <input type="text" name="name">
+            <p>Digite seu telefone:</p>
+            <input type="number" name="" id="telefone">
+            <input type="button" id="botao" value="enviar">
+
+        </div>
+        <div class="box" id="atendimento">
+            <p>Ligue para a loja pelo telefone.  <br><br>(47) 99101-5454 <br><br>ou <br><br>(47) 3324-4585</p>
+        </div>
+    </div>
+</body>
+</html>

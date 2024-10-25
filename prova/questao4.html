@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 4 - bandeiras</title>
+
+    <style>
+        .container {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            min-height: 100vh;
+        }
+
+        .bandeira {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            width: 300px;
+            height: 200px;
+        }
+
+        .bandeira:hover {
+            transform: scale(1.05);
+            width: 310px;
+            height: 330px;
+        }
+
+        #italia {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .colunaVerde {
+            background-color: green;
+            width: 100px;
+            height: 225px;
+        }
+        .colunaBranca {
+            background-color: white;
+            width: 100px;
+            height: 225px;
+        }
+
+        .colunaVermelha {
+            background-color: red;
+            width: 100px;
+            height: 225px;
+        }
+        
+
+        #holanda {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .linhaVermelha {
+            background-color: red;
+            width: 300px;
+            height: 75px;
+        }
+
+        .linhaBranca {
+            background-color: white;
+            width: 300px;
+            height: 80px;
+        }
+
+        .linhaAzul {
+            background-color: blue;
+            width: 300px;
+            height: 60px;
+        }
+
+        #japao {
+            display: flex;
+            grid-gap: 10px;   
+        }
+
+        .branco {
+            background-color: white;
+            width: 300px;
+            height: 225px;
+            border: 1px solid black;
+        }
+
+        .circuloVermelho {
+            width: 100px;
+            height: 100px;
+            margin: 60px auto 20px auto;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bandeira" id="italia">
+            <div class="colunaVerde"></div>
+            <div class="colunaBranca"></div>
+            <div class="colunaVermelha"></div>
+        </div>
+        <div class="bandeira" id="holanda">
+            <div class="linhaVermelha"></div>
+            <div class="linhaBranca"></div>
+            <div class="linhaAzul"></div>
+        </div>
+        <div class="bandeira" id="Japão">
+            <div class="branco">
+                <div class="circuloVermelho"></div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
