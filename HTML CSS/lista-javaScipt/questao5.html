@@ -7,10 +7,9 @@
 </head>
 <body>
     <script>
-        let a = prompt("Insira um número")
-        let b = prompt("Insira outro número")
-        let c = parseFloat(a) + parseFloat(b);
-        alert(c);
+        const numA = Number.parseFloat(prompt("Digite o primeiro número:"));
+        const numB = Number.parseFloat(prompt("Digite o segundo número:"));
+        console.log("A soma dos numros é:", numA + numB);
     </script>
 </body>
 </html>
