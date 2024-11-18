@@ -6,23 +6,24 @@
     <title>13</title>
 </head>
 <body>
-    <input type="text">
-    <button>Copiar</button>
-    <div class="textos"></div>
-    <script>
-        let inputTxt = document.querySelector("input")
-        let textos = document.querySelector(".textos")
-        let button = document.querySelector("button")
+    <input type="text" id="txt">
+    <button id="bt" onclick="copia2()">Copiar</button>
+    <div id="paragrafos"></div>
 
-        //funçao que reaaliza a copia do texto para div paragrafos
-        /*function copiar()*/
-        button.addEventListener("click",()=>{
-            let str = inputTxt.value;
-            //textos.innerHTML+= "<p>"+str+"</p>";
-            let meup = document.createElement("p")
-            meup.innerHTML=str;
-            textos.appendChild(meup)
-        })
+    <script>
+        let txt = document.querySelector("#txt");
+        let paragrafos = document.querySelector("#paragrafos");
+
+        function copia(){
+            paragrafos.innerHTML += txt.value+"<br>";
+            txt.value = "";
+        }
+        function copia2(){
+            let meup = document.createElement("p");
+            meup.innerHTML= txt.value;
+            paragrafos.appendChild(meup);
+            txt.value = "";
+        }
     </script>
 </body>
 </html>
