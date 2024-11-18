@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+</head>
+<body>
+    <input type="text">
+    <button>Copiar</button>
+    <div class="textos"></div>
+    <script>
+        let inputTxt = document.querySelector("input")
+        let textos = document.querySelector(".textos")
+        let button = document.querySelector("button")
+
+        //funçao que reaaliza a copia do texto para div paragrafos
+        /*function copiar()*/
+        button.addEventListener("click",()=>{
+            let str = inputTxt.value;
+            //textos.innerHTML+= "<p>"+str+"</p>";
+            let meup = document.createElement("p")
+            meup.innerHTML=str;
+            textos.appendChild(meup)
+        })
+    </script>
+</body>
+</html>
