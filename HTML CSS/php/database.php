@@ -7,14 +7,10 @@ function conectDb() {
 
     $db= new PDO( "mysql:host=$host;dbname=$database",  $user,password:$pass);
     $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//xhcando se a conexao foi estabelecida con ucesso e retornando a conexao
-    try { 
-        $db->exec("SHOW TABLES"); 
-    } catch (PDOException $e){
-        echo "". $e->getMessage() . "";
-    }    
+
+    //xhcando se a conexao foi estabelecida con ucesso e retornando a conexao 
     
-/*função que conecta com o banco de dados e retorna a conexão com banco ou false */
+    //função que conecta com o banco de dados e retorna a conexão com banco ou false
     if ($db) {
         return $db;
     }
@@ -34,10 +30,10 @@ function conectDb() {
 function check_conn($conn_id): void{
     if ($conn_id ) {
         echo "Conexao concluida";
-}
+    }
     else {
         echo "Erro ao conectar";
-}
+    }
 }
 var_dump(conectDb());
 check_conn( conectDb());
