@@ -58,19 +58,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-    <form action="rota.php?action=cadastrar" method="post">
-        <h1>Editar Usuário</h1>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($pessoa['nome']) ?>" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" value="<?= htmlspecialchars($pessoa['email']) ?>" required>
-        <br><br>
-        <label for="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" value="<?= htmlspecialchars($pessoa['senha']) ?>" required>
-        <br><br>
-        <button type="submit">Salvar</button>
-        <a href="index.php">Cancelar</a>
-    </form>
+<form action="rota.php?action=editar" method="post">
+    <input type="hidden" name="id" value="<?= htmlspecialchars($pessoa['id']) ?>">
+    <h1>Editar Usuário</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" value="<?= htmlspecialchars($pessoa['nome']) ?>" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" value="<?= htmlspecialchars($pessoa['email']) ?>" required>
+    <br><br>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" placeholder="Nova senha (opcional)">
+    <br><br>
+    <button type="submit">Salvar</button>
+    <a href="index.php">Cancelar</a>
+</form>
 </body>
 </html>

@@ -10,7 +10,7 @@ class PessoaController {
 
     public function cadastrarPessoa($nome, $email, $senha) {
         $pessoa = new Pessoa();
-        $pessoa->setAll($nome, $email, password_hash($senha, PASSWORD_DEFAULT));  // Aplica o hash na senha
+        $pessoa->setAll($nome, $email, $senha);
         return $this->dao->insert($pessoa);
     }
 
@@ -24,13 +24,11 @@ class PessoaController {
 
     public function editarPessoa($id, $nome, $email, $senha) {
         $pessoa = new Pessoa();
-        $pessoa->id = $id; 
-        if (!empty($senha)) {
-            $senha = password_hash($senha, PASSWORD_DEFAULT); 
-        }
-        $pessoa->setAll($nome, $email, $senha);
+        $pessoa->id = $id;
+        $pessoa->setAll($nome, $email, $senha); // Remove o uso de password_hash
         return $this->dao->update($pessoa);
     }
+    
     
 
     public function buscarPessoaPorId($id) {

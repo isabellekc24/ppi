@@ -15,8 +15,7 @@ class PessoaDAO {
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(":nome", $pessoa->nome);
             $stmt->bindValue(":email", $pessoa->email);
-            $hashedPassword = md5($pessoa->senha);
-            $stmt->bindValue(":senha", $hashedPassword);
+            $stmt->bindValue(":senha", $pessoa->senha); // Armazena diretamente
             return $stmt->execute();
         } catch (PDOException $e) {
             throw new Exception("Erro ao inserir usuário: " . $e->getMessage());
@@ -45,15 +44,21 @@ class PessoaDAO {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function update($pessoa) {
-        $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':nome', $pessoa->nome);
-        $stmt->bindParam(':email', $pessoa->email);
-        $stmt->bindParam(':senha', $pessoa->senha);
-        $stmt->bindParam(':id', $pessoa->id);
-        return $stmt->execute();
+    public function update(Pessoa $pessoa) {
+        try {
+            $sql = "UPDATE usuarios SET nome = :nome, email = :email, senha = :senha WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':nome', $pessoa->nome);
+            $stmt->bindParam(':email', $pessoa->email);
+            $stmt->bindParam(':senha', $pessoa->senha); // Armazena diretamente
+            $stmt->bindParam(':id', $pessoa->id);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            throw new Exception("Erro ao atualizar usuário: " . $e->getMessage());
+        }
     }
+    
+    
     
 }
 ?>

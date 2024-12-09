@@ -1,7 +1,7 @@
 <?php
 function conectDb() {
     $user="root";
-    $pass="aluno";
+    $pass="Berbelle77-";
     $database="crud";
     $host="localhost";
 
@@ -35,7 +35,7 @@ function check_conn($conn_id): void{
         echo "Erro ao conectar";
     }
 }
-var_dump(conectDb());
-check_conn( conectDb());
+//var_dump(conectDb());
+//check_conn( conectDb());
 
 ?>
