@@ -12,8 +12,12 @@
     <?php 
         function hello(){
         $hello="Hello";
+        echo $hello;
         }
+        
+        hello();
     ?>
+    
         
 </body>
 </html>

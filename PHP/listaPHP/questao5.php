@@ -9,28 +9,31 @@
 <!--Crie um site em PHP que faça o sorteio de um número aleatório no intervalo 
 informado pelo usuário por meio de um formulário HTML.-->
 <form method="POST" ACTION="">
-    <label for="nmin">Numero Mínimo: </label>
-    <input min="name" type="number" value="" /><br/>
+    <label for="nmin">Número Mínimo: </label>
+    <input name="nmin" type="number" value="" /><br/>
     
-    <label for="nmax">Numero Maximo: </label>
-    <input max="name" type="number" value="" /><br/>
+    <label for="nmax">Número Máximo: </label>
+    <input name="nmax" type="number" value="" /><br/>
 
-    <button type="submit">sortear</button>
+    <button type="submit">Sortear</button>
 </form>
-<?php
 
-function sortear($min, $max){
+<?php
+function sortear($min, $max) {
     $min = (int)$min;
     $max = (int)$max;
 
     return rand($min, $max);
 }
-    $min = $_POST['min'];
-    $max = $_POST['max'];
 
-    echo "<h2>O número sorteado é: $sortear</h2>";
-
-
+if (isset($_POST['nmin']) && isset($_POST['nmax'])) {
+    $min = $_POST['nmin'];
+    $max = $_POST['nmax'];
+    
+    $numeroSorteado = sortear($min, $max);
+    echo "<h2>O número sorteado é: $numeroSorteado</h2>";
+}
 ?>
+
 </body>
 </html>
